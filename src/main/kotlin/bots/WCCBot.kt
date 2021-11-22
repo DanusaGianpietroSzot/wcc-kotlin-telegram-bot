@@ -12,17 +12,8 @@ import org.telegram.telegrambots.meta.exceptions.TelegramApiException
 
 class WCCBot : TelegramLongPollingBot() {
 
-    /*val welcome = EmojiParser.parseToUnicode("""
-        *Olaaaaaá :blush:, tudo bem\?*
-        Bem\-vinde à terra da She\-Ra\!
-        Escolha:
-        \/start \- começar o projeto
-        \/info \- para saber mais sobre o projeto
-    """).trimIndent()*/
-
     override fun getBotUsername(): String {
         //return bot username
-        // If bot username is @HelloKotlinBot, it must return
         return "She-Ra_Bot"
     }
 
@@ -193,6 +184,8 @@ class WCCBot : TelegramLongPollingBot() {
                 }
                 execute(sendDocument)
             }
+            //É possível transformar os Ifs em When, no outro Bot farei isso
+            //Não necessário else
             /*else {
                     val sendDocument = SendMessage().apply {
                         this.chatId = chatId
